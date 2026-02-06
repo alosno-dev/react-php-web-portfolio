@@ -12,10 +12,6 @@ Intranet Jet es una aplicación web moderna desarrollada para la gestión integr
 - **Tailwind CSS**: Framework CSS utility-first para diseño responsivo
 - **JavaScript ES6+**: Lenguaje de programación moderno
 
-### Herramientas de Desarrollo
-- **ESLint**: Linter para mantener calidad y consistencia del código
-- **npm**: Gestor de dependencias y scripts
-
 ## Estructura del Proyecto
 
 ```
@@ -57,39 +53,6 @@ intranet-jet/
 - **Gestión de Marcas**: Administración de información sobre marcas de vehículos
 - **Interfaz Responsiva**: Diseño adaptado para dispositivos móviles y desktop
 - **Componentes Reutilizables**: Arquitectura modular para mantenibilidad
-
-## Instalación y Uso
-
-### Requisitos Previos
-- Node.js (versión 14 o superior)
-- npm o yarn
-
-### Instalación
-
-```bash
-# Clonar repositorio
-git clone <url-repositorio>
-cd intranet-jet
-
-# Instalar dependencias
-npm install
-```
-
-### Comandos Disponibles
-
-```bash
-# Iniciar servidor de desarrollo
-npm run dev
-
-# Compilar para producción
-npm run build
-
-# Vista previa de producción
-npm run preview
-
-# Validar código con ESLint
-npm run lint
-```
 
 ## Arquitectura y Patrones
 
