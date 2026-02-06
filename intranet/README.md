@@ -1,90 +1,85 @@
-# Intranet Jet - Sistema de Gestión de Vehículos
+# Intranet Jet - Vehicle Management System
 
-## Descripción
+## Description
 
-Intranet Jet es una aplicación web moderna desarrollada para la gestión integral de vehículos. La plataforma permite a los usuarios consultar catálogos de vehículos, realizar reservas (bookings), gestionar información de marcas y acceder a galerías de imágenes mediante una interfaz intuitiva y responsiva.
+Intranet Jet is a modern web application developed for comprehensive vehicle management. The platform allows users to browse vehicle catalogs, make bookings, manage brand information, and access image galleries through an intuitive and responsive interface.
 
-## Tecnologías Principales
+## Main Technologies
 
 ### Frontend
-- **React 18**: Framework JavaScript para construcción de interfaces de usuario interactivas
-- **Vite**: Bundler y servidor de desarrollo de alto rendimiento
-- **Tailwind CSS**: Framework CSS utility-first para diseño responsivo
-- **JavaScript ES6+**: Lenguaje de programación moderno
+- **React 18**: JavaScript framework for building interactive user interfaces
+- **Vite**: High-performance bundler and development server
+- **Tailwind CSS**: Utility-first CSS framework for responsive design
+- **JavaScript ES6+**: Modern programming language
 
-## Estructura del Proyecto
+### Development Tools
+- **ESLint**: Linter to maintain code quality and consistency
+- **npm**: Dependency manager and scripts
+
+## Project Structure
 
 ```
 intranet-jet/
 ├── src/
-│   ├── components/          # Componentes reutilizables
-│   │   ├── acordeonCoche.jsx          # Acordeón para información de vehículos
-│   │   ├── dialogoOpcion.jsx          # Diálogos modales
-│   │   ├── formularioBooking.jsx      # Formulario de reservas
-│   │   ├── formularioNuevoCoche.jsx   # Formulario para agregar vehículos
-│   │   ├── galeriaImagenes.jsx        # Galería de imágenes
-│   │   ├── marcasImagenes.jsx         # Gestión de imágenes de marcas
-│   │   ├── selectConOpciones.jsx      # Select personalizado
-│   │   └── SelectMultiple.jsx         # Select múltiple
+│   ├── components/          # Reusable components
+│   │   ├── acordeonCoche.jsx          # Accordion for vehicle information
+│   │   ├── dialogoOpcion.jsx          # Modal dialogs
+│   │   ├── formularioBooking.jsx      # Booking form
+│   │   ├── formularioNuevoCoche.jsx   # Form to add vehicles
+│   │   ├── galeriaImagenes.jsx        # Image gallery
+│   │   ├── marcasImagenes.jsx         # Brand image management
+│   │   ├── selectConOpciones.jsx      # Custom select
+│   │   └── SelectMultiple.jsx         # Multiple select
 │   ├── hooks/               # Custom React hooks
-│   ├── pages/               # Páginas principales
-│   │   └── mainPage.jsx     # Página principal
-│   ├── services/            # Servicios (API calls, lógica de negocio)
-│   ├── utils/               # Funciones utilitarias
-│   ├── assets/              # Recursos estáticos (imágenes, íconos)
-│   ├── App.jsx              # Componente raíz
-│   ├── App.css              # Estilos globales
-│   ├── index.css            # Estilos base
-│   └── main.jsx             # Punto de entrada
-├── public/                  # Archivos públicos estáticos
-├── vite.config.js           # Configuración de Vite
-├── tailwind.config.js       # Configuración de Tailwind CSS
-├── eslint.config.js         # Configuración de ESLint
-├── .env.local               # Variables de entorno locales
-├── package.json             # Dependencias y scripts
-└── index.html               # Archivo HTML principal
+│   ├── pages/               # Main pages
+│   │   └── mainPage.jsx     # Main page
+│   ├── services/            # Services (API calls, business logic)
+│   ├── utils/               # Utility functions
+│   ├── assets/              # Static resources (images, icons)
+│   ├── App.jsx              # Root component
+│   ├── App.css              # Global styles
+│   ├── index.css            # Base styles
+│   └── main.jsx             # Entry point
+├── public/                  # Public static files
+├── vite.config.js           # Vite configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+├── eslint.config.js         # ESLint configuration
+├── .env.local               # Local environment variables
+├── package.json             # Dependencies and scripts
+└── index.html               # Main HTML file
 ```
 
-## Características Principales
+## Main Features
 
-- **Gestión de Vehículos**: Consulta y administración de catálogo de vehículos
-- **Sistema de Reservas**: Formulario completo para booking de vehículos
-- **Galería de Imágenes**: Visualización de catálogo multimedia
-- **Gestión de Marcas**: Administración de información sobre marcas de vehículos
-- **Interfaz Responsiva**: Diseño adaptado para dispositivos móviles y desktop
-- **Componentes Reutilizables**: Arquitectura modular para mantenibilidad
+- **Vehicle Management**: Browse and manage the vehicle catalog
+- **Booking System**: Full booking form for vehicle reservations
+- **Image Gallery**: Multimedia catalog viewing
+- **Brand Management**: Manage vehicle brand information
+- **Responsive Interface**: Design adapted for mobile and desktop
+- **Reusable Components**: Modular architecture for maintainability
 
-## Arquitectura y Patrones
+## Architecture and Patterns
 
-### Componentes
-- **Componentes Funcionales**: Utilizando React Hooks para lógica de estado
-- **Props Drilling**: Paso de props entre componentes
-- **Custom Hooks**: Lógica reutilizable encapsulada en hooks personalizados
+### Components
+- **Functional Components**: Using React Hooks for state logic
+- **Props Drilling**: Passing props between components
+- **Custom Hooks**: Reusable logic encapsulated in custom hooks
 
 ### Styling
-- **Tailwind CSS**: Clases utilitarias para estilos rápidos y consistentes
-- **CSS Modules**: Estilos modular cuando es necesario aislamiento
+- **Tailwind CSS**: Utility classes for fast, consistent styling
+- **CSS Modules**: Modular styles when isolation is required
 
-### Servicios
-- Separación de lógica de negocio en servicios independientes
-- Gestión de llamadas a APIs y solicitudes HTTP
+### Services
+- Separation of business logic into independent services
+- Management of API calls and HTTP requests
 
-## Variables de Entorno
+## Implemented Best Practices
 
-Las variables de entorno se configuran en el archivo `.env.local`:
+- Small, focused components (Single Responsibility)
+- Separation of concerns (Services, Hooks, Components)
+- Clean, readable code with ESLint
+- Scalable and modular structure
+- Component reuse
+- Responsive design with Tailwind CSS
 
-```
-VITE_API_URL=<url-api>
-VITE_APP_NAME=Intranet Jet
-```
-
-## Mejores Prácticas Implementadas
-
- Componentes pequeños y enfocados (Single Responsibility)
-- Separación de responsabilidades (Services, Hooks, Components)
-- Código limpio y legible con ESLint
-- Estructura escalable y modular
-- Reutilización de componentes
-- Responsive Design con Tailwind CSS
-
-**Última actualización**: 2025
+**Last updated**: 2025
